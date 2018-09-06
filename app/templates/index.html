@@ -1,0 +1,45 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Blue Elephants{% endblock %}
+
+
+{% block content %}
+<body class="bg-light">
+	<div class="container">
+		<div class="py-5 text-center">			  
+			<h2>Hello</h2>
+			<p class="lead">What else should Web Application Development include?</p>
+			<!-- text-center -->
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="mb-3">
+	            	{% with messages = get_flashed_messages() %}
+						{% if messages %}
+							{% for message in messages %}
+								<div class="alert alert-info">{{ message }}</div>
+							{% endfor %}
+						{% endif %}
+					{% endwith %}
+
+					  <form  action="" method="post" role="form" name="idea">
+					  	{{ form.hidden_tag() }}
+						{{ form.csrf }}
+						<div class="form-group">
+							<input type="text" class="form-control" id="idea" name="idea" placeholder="We should learn about blue elephants.">
+						</div>
+						<button type="submit" class="btn btn-success">Submit your idea</button>
+					</form>
+	            </div>
+
+
+	            <!-- col -->
+	        </div> 
+	        <!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+</body>
+{% endblock %}
+
+
