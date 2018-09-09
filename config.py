@@ -1,6 +1,6 @@
 WTF_CSRF_ENABLED = True
 SECRET_KEY = 'a-very-secret-elephant'
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
 
 import os
 
